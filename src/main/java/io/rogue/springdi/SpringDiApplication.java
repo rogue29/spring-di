@@ -1,5 +1,6 @@
 package io.rogue.springdi;
 
+import io.rogue.springdi.config.FakeConfig;
 import io.rogue.springdi.controller.ConstructorInjectedController;
 import io.rogue.springdi.controller.PropertyInjectedController;
 import io.rogue.springdi.controller.SetterInjectedController;
@@ -24,6 +25,9 @@ public class SpringDiApplication {
         System.out.println("xxxxxx Constructor Injection xxxxxx");
         ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) applicationContext.getBean("constructorInjectedController");
         System.out.println(constructorInjectedController.sayHello());
+
+        FakeConfig fakeConfig = applicationContext.getBean(FakeConfig.class);
+        System.out.printf("User: %s%nPassword: %s%nURL: %s", fakeConfig.getUser(), fakeConfig.getPassword(), fakeConfig.getUrl());
     }
 
 }

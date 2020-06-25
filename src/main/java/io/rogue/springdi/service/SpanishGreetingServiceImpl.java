@@ -3,11 +3,11 @@ package io.rogue.springdi.service;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Profile({"EN", "default"})
+@Profile("ES")
 @Service(value = "greetingService")
-public class GreetingServiceImpl implements GreetingService {
+public class SpanishGreetingServiceImpl implements GreetingService {
     @Override
     public String getGreeting() {
-        return "Hello World!";
+        return "Hola - From Spain";
     }
 }
