@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: ES
+---
+spring:
+  profiles: ES
+rogue:
+  db:
+    user: roguista
+    password: roguista
+    url: http://localhost:8080/ppmiguel
+---
+spring:
+  profiles: EN
+rogue:
+  db:
+    user: rogue
+    password: rogue
+    url: http://localhost:8080/ppmtool
